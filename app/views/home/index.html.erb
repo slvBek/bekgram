@@ -1,0 +1,33 @@
+<div class="header">
+<div class="d-flex my-5 justify-content-center gap-5">
+  <div class="d-flex flex-column gap-3">
+    <%= render "story/stories_list" %>
+    <div class="flex flex-column">
+      <% @feeds.each do |p| %>
+        <%= render "posts/post", post: p %>
+      <% end %>
+    </div>
+  </div>
+  <%= render "suggestions/suggestions_list", suggestions: @suggestions %>
+</div>
+</div>
+
+<style>
+  .header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  width: 100%;
+    height: 110vh;
+    background: #e55d87;
+    background: -moz-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
+    background: -webkit-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
+    background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e55d87', endColorstr='#5fc3e4', GradientType=1 );
+  }
+</style>

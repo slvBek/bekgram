@@ -1,0 +1,112 @@
+html {
+    height: 100vh;
+}
+
+body {
+    background-color: #fafafa;
+    height: 100%;
+}
+
+.home-sections {
+    height: 100%;
+    width: 80%;
+}
+
+.images-section,
+.login-section {
+    height: 95%;
+    width: 45%;
+    background-position-x: right;
+}
+
+.images-section {
+    background-image: url(home-phone-bg.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card-img-top {
+    max-width: 50%;
+    align-self: center;
+    margin-top: 50px;
+}
+
+.line-text {
+    padding: 0.5rem;
+    font-size: small;
+    margin: 0;
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background-color: rgb(139, 137, 137);
+}
+
+.facebook {
+    max-width: 1rem;
+    height: auto;
+    margin-right: 8px;
+}
+
+.card::-webkit-scrollbar {
+  width: 0;
+}
+
+
+.filepond--item {
+  width: calc(50% - 0.5em);
+}
+
+.filepond--root {
+  max-height: 20em;
+}
+
+.color-red {
+  color: red;
+}
+
+.profile-post-likes {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  text-shadow: 1px 1px 10px #000000a6;
+}
+
+.profile-post:hover img {
+  opacity: 50%
+}
+
+.profile-post:hover .profile-post-likes {
+  visibility: visible;
+}
+
+.multiple-images {
+  position: absolute;
+  top: 15%;
+  right: 7%;
+  transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 10px #000000a6;
+}
+
+.profile-edit-btn {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  border-left: solid black 3px;
+  background-color: rgb(248, 248, 248);
+}
+
+.profile-edit-btn:hover {
+  background-color: rgb(248, 248, 248);
+  color: black;
+}
+
+.a-decoration-none {
+  text-decoration: none;
+  color: black;
+}

@@ -1,0 +1,48 @@
+<div class="header">
+<div class="container d-flex flex-column">
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="w-content border-2 border-top border-dark">
+      <i class="fa-solid fa-table-cells"></i>
+      <small>POSTS</small>
+    </div>
+  </div>
+  <div>
+  <div class="row justify-content-center align-items-center">
+    <% user.posts.each do |post| %>
+      <div class="col-lg-4 col-md-6 col-sm-8 p-3 mb-4 profile-post" style="height:20rem;position:relative">
+        <%= link_to post do %>
+          <%= image_tag post.images.first, class: "img-thumbnail", style:"width:100%;height:20rem;object-fit:cover" %>
+          <div class="d-flex align-items-center justify-content-center gap-1 w-100 profile-post-likes">
+            <i class="fa-solid fa-heart fa-xl text-white"></i>
+            <small class="text-white fw-bold"> <%= post.likes.count %></small>
+            <i class="fa-solid fa-comment fa-xl fa-flip-horizontal text-white"></i>
+            <small class="text-white fw-bold"> <%= post.comments.count %></small>
+          </div>
+          <% if post.images.count > 1 %>
+            <i class="fa-solid fa-images text-white multiple-images"></i>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<style>
+  .header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  width: 100%;
+    height: 110vh;
+    background: #e55d87;
+    background: -moz-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
+    background: -webkit-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
+    background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e55d87', endColorstr='#5fc3e4', GradientType=1 );
+  }
+</style>
