@@ -2,8 +2,10 @@
 <div class="container home-sections d-flex flex-row justify-content-center align-items-center">
     <div class="images-section pt-3 d-none d-lg-block" style="margin-top: 0px;"></div>
     <div class="login-section pt-3">
-            <div class="card text-center pt-5" style="width: 23rem;">
-                <%= image_tag "logo.png", class: "card-img-top" %>
+            <div class="card text-center" style="width: 23rem;height:30rem;">
+                <div style="height:7rem; top:0">
+                  <%= image_tag "logo.png", class: "card-img-top" %>
+                </div>
                 <div class="card-body">
                   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                     <div class="mb-3 mt-4">
@@ -45,7 +47,7 @@
 
 <style>
 .card {
-    top: 50px;
+    top: 35px;
     left: 20px;
 }
   body {
@@ -93,7 +95,7 @@
   }
   
   .full-screen {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;

@@ -1,18 +1,17 @@
 <div class="full-screen">
 <div class="container home-sections d-flex flex-row justify-content-center align-items-center">
 <div class="images-section pt-3 d-none d-lg-block"></div>
-    <div class="login-section pt-3">
-
-            <div class="card text-center pt-5 mx-auto" style="width: 23rem; right: 88px;">
+    <div class="login-section" style="font-size: 10">
+            <div class="card text-center pt-5 mx-auto" style="width: 23rem; right: 70px;">
                 <%= image_tag "logo.png", class: "card-img-top" %>
                 <p class="w-75 fs-6 fw-bold text-secondary align-self-center mt-2"> Sign up to see photos and videos from your fiends. </p>
 
-                <a href="#" class="d-block mt-4 text-decoration-none fw-bold bg-primary text-white rounded w-75 align-self-center p-1">
+                <a href="#" class="d-block mt-2 text-decoration-none fw-bold bg-primary text-white rounded w-75 align-self-center p-1">
                 <%= image_tag("facebook.png", class: "facebook") %>
                 Log in with Facebook
                 </a>
 
-                <div class="d-flex align-items-center mt-4">
+                <div class="d-flex align-items-center mt-2">
                     <div class="line"></div>
                     <h2 class="line-text">OR</h2>
                     <div class="line"></div>
@@ -20,13 +19,13 @@
 
                 <div class="card-body">
                 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-                  <div class="mb-3 mt-4">
+                  <div class="mb-2">
                         <%= f.email_field :email, class: "form-control", placeholder: "Phone number or email" %>
                   </div>
-                  <div class="mb-3 mt-4">
+                  <div class="mb-3">
                         <%= f.text_field :full_name, class: "form-control", placeholder: "Full Name" %>
                   </div>
-                  <div class="mb-3 mt-4">
+                  <div class="mb-3">
                         <%= f.text_field :username, class: "form-control", placeholder: "Username" %>
                   </div>
                   <div class="mb-3"> 
@@ -48,7 +47,7 @@
             </div>
         </div>
 
-        <div class="card text-center py-2 mt-3 mx-auto" style="width: 23rem; right: 87px; top: 18px;">
+        <div class="card text-center py-2 mt-3 mx-auto" style="width: 23rem; right: 70px; top: 18px;">
             <div class="card-text">
                 Have an account?
               <%= link_to "Sign In", new_user_session_path, class: "fs-6 my-4 text-decoration-none text-info" %>
@@ -60,7 +59,7 @@
 
 <style>
 .card{
-    top: 20px;
+    top: 8px;
 }
 .card-img-top {
     margin-top: -40px;
@@ -123,4 +122,5 @@
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: column
+  }
 </style>
